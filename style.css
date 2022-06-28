@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
-
 * {
     box-sizing: border-box;
 }
@@ -26,6 +25,20 @@ body {
 
 .quiz-header {
     padding: 4rem;
+}
+
+.numberCircle {
+    position: fixed;
+    padding: 2px;
+    margin: 10px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font: 25px Arial, sans-serif;
 }
 
 h2 {

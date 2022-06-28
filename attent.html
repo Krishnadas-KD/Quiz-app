@@ -6,10 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Quiz App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+<script>
+    var sec = 10;
+    var timer = setInterval(function() {
+        $('#countdown').text(sec--);
+        if (sec == 0) {
+            sec = 10;
+
+        }
+        if (sec < 6) {
+            $("#countdown").fadeToggle(1000);
+            $('#countdown').css('color', 'red');
+            $('#countdown').css('border-color', 'red');
+        }
+        if (sec >= 6) {
+            $("#countdown").fadeIn();
+            $('#countdown').css('color', 'black');
+            $('#countdown').css('border-color', 'black');
+        }
+    }, 1000);
+</script>
 
 <body>
+
     <div class="quiz-container" id="quiz">
+        <div align="left" id="countdown" class="numberCircle ">1</div>
         <div class="quiz-header">
             <h2 id="question">Question text</h2>
             <ul>
@@ -34,7 +57,7 @@
                 </li>
             </ul>
         </div>
-        <button id="submit">Submit</button>
+
     </div>
     <script src="script.js"></script>
 </body>
